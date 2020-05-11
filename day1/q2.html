@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<HTML>
+    <HEAD>
+        <TITLE>
+            QUESTION NO 2 
+        </TITLE>
+    </HEAD>
+
+    <BODY>
+        <p><h1>Welcome to my page</h1></p>
+        <p id = "sandy">Let's dee what happens after you clock the button below</p>
+        <button onclick="fun()">
+            click me
+        </button>
+        <p><h3>below button will give op in new page . It uses document.write function </h3></p>
+        <button onclick="fun2()"> button 2</button>
+
+        <script>
+            function fun(){
+                window.alert("Sandeep Gupta");  //for alert
+                document.getElementById("sandy").innerHTML = "<h1>Sandeep Gupta<h1>";     //for browser
+                console.log("Hello Sandeep"); //for console
+            }
+            
+            function fun2(){
+                window.alert("Sandeep Gupta");  //for alert
+                document.write("Sandeep Gupta")     //for browser
+                console.log("Hello Sandeep"); //for console
+            }
+        </script>
+    </BODY>
+</HTML>

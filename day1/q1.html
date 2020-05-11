@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Q1
+        </title>
+    </head>
+
+    <body><center>
+        <p><h1>Enter 3 numbers</h1></p>
+        Number 1 : <input type="number" id='num1'><br><br>
+        Number 2 : <input type="number" id='num2'><br><br>
+        Number 3 : <input type="number" id='num3'><br><br>
+        <p id="result"></p><br><br>
+        <button onclick="highest(num1.value,num2.value,num3.value)">Get Highest</button>
+    </center>
+
+    <script>
+        function highest(a,b,c){
+            if(a>b)
+            {
+                if(a>c){
+                    document.write(a);      
+                }
+                else document.wirte(c);
+            }
+            else if (b>c)
+            {
+                document.write(b);
+            }
+            else document.write(c);
+        }
+    </script>
+    </body>
+</html>
