@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Q8
+        </title>
+    </head>
+    <body>
+        <p>Create an array having 5 names and display it in descending order</p>
+        <p id="array1"></p><br><br>
+        <p id="array2"></p><br><br>
+        <button onclick="desc()" >Sort</button>
+
+        <script>
+            var array1= ["sandeep","girish","akash","ravi","pratik"];
+            document.getElementById("array1").innerHTML="Original array : "+ array1;
+
+            function desc()
+            {
+                array1.sort();
+                document.getElementById("array2").innerHTML = "Sorted array : " + array1 ;
+            }
+
+            
+        </script>
+
+    </body>
+</html>

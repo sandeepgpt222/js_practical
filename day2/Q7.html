@@ -13,14 +13,13 @@
 
         <script>
            
-            var arr = [10,50,85,1,25,62,50,35,41,50];
-            document.getElementById('arr1').innerHTML = arr;
-            change()
+              
+            function change()
             {
-                
-                brr = document.getElementById('arr1').innerHTML;
-                brr.sort(function(a, b){return a-b});
-                document.getElementById("arr2").innerHTML = brr ;
+                var arr = [10,50,85,1,25,62,50,35,41,50];
+                document.getElementById('arr1').innerHTML = arr;
+                arr.sort(function(a, b){return a-b}) ;
+                document.getElementById("arr2").innerHTML = arr ;
             }
 
 
