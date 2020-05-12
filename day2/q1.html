@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Q1
+        </title>
+    </head>
+
+    <body>
+        <h1>Create an array having 10 numbers , write a function whose  job is to return max number from the array</h1>
+        <h3><p>Array is : <span id='arr'></span></p></h3>
+        <h3><p>Highest element : <span id="high"></span></p></h3>
+
+        <button onclick="highest()">Find highest</button>
+
+
+        <script>
+            var myArr = [20,50,80,90,100,45,62,74,25,41] ;
+            document.getElementById('arr').innerHTML=myArr;
+
+            function highest()
+            {
+                myArr.sort( function(a,b){ return (a-b)} );
+                document.getElementById("high").innerHTML=myArr[9];
+
+            }
+        </script>
+
+    </body>
+
+
+</html>

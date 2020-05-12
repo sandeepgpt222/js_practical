@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Q6
+        </title>
+    </head>
+    <body>
+        Name 1 : <input type="text" id="box1">
+        Name 2 : <input type="text" id="box2">
+
+        <button onclick="copy()" >click to copy </button>
+
+        <script>
+
+            function copy()
+            {
+                var a=document.getElementById("box1").value;
+                                
+                document.getElementById("box2").value=a;
+            }
+        </script>
+    </body>
+</html>
