@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Q4
+        </title>
+    </head>
+
+    <body>
+        <p><h1>Account details</h1></p><br><br>
+
+        <p id = "acc1"></p><br><br>
+        <p id = "acc2"></p><br><br>
+
+        <script>
+            class Account{
+                constructor(uname,bal){
+                    this.name = uname;
+                    this.balance = bal;
+                }
+
+                deposit(amt){
+                    this.balance = this.balance + amt ;
+                }
+
+            }
+
+            class currentAccount extends Account{
+               
+                withdraw(amt){
+                    this.balance -= amt;
+                }
+
+                show(){
+                    return "Account holder : " + this.name + "<br> Balance :" + this.balance;
+                }
+
+            }
+
+            var acc1 = new currentAccount("Sandeep",50000);
+            var acc2 = new currentAccount("Harish", 90000);
+            acc1.deposit(10000);
+            acc2.withdraw(5000);
+            document.getElementById("acc1").innerHTML = acc1.show();
+            document.getElementById("acc2").innerHTML = acc2.show();
+            
+
+        </script>
+
+    </body>
+</html>
