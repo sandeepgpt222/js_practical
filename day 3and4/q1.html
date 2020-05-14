@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Q1
+        </title>
+    </head>
+
+    <body>
+        <h1>Using arrow keyword find factorial.</h1>
+        <input type="number" id = "num" />
+        <button onclick="facto(num.value)">Factorial</button>
+
+        <p>Factorial is : <span id = "cal"></span> </p>
+
+        <script>
+            facto = (num) =>
+            {
+                var no = num;
+                var prod = 1;
+                while (no)
+                {
+                    prod= prod*no;
+                    no--;
+                }
+                document.getElementById("cal").innerHTML= prod ;
+            }
+        </script>
+    </body>
+</html>
