@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Q2
+        </title>
+    </head>
+
+    <body>
+        <p><h1>Account details</h1></p><br><br>
+        <p id = "acc1"></p><br><br>
+        <p id = "acc2"></p><br><br>
+
+        <script>
+            class Account{
+                constructor(uname,bal){
+                    this.name = uname;
+                    this.balance = bal;
+                }
+
+                deposit(amt){
+                    this.balance = this.balance + amt ;
+                }
+
+                display(){
+                    return "Account holder : " + this.name + "<br> Balance :" + this.balance;
+                }
+
+            }
+
+            var acc1 = new Account("Sandeep",50000);
+            var acc2 = new Account("Harish", 90000);
+            document.getElementById("acc1").innerHTML = acc1.display();
+            document.getElementById("acc2").innerHTML = acc2.display();
+            
+
+        </script>
+
+    </body>
+</html>
