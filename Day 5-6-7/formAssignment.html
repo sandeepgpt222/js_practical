@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Day 5-6-7
+        </title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <script>
+            function validation(){
+                var uid,password,age,address,mobile;
+
+                uid = document.getElementById("uid").value;
+                var len= uid.length;
+                if(len<3 || len>15)
+                {
+                    document.getElementById("cuid").innerHTML="UserId should be minimum 3 and maximum 15 characters";
+                }
+
+                password = document.getElementById("password").value;
+                var pLen = password.length;
+                if(pLen < 8)
+                {
+                    document.getElementById("cpassword").innerHTML="Password must be min 8 character long";
+                }
+
+                mobile = document.getElementById("mobile").value;
+                var mLen = toString(mobile);
+                if( isNaN(mobile) || mobile.length != 10 )
+                {
+                    document.getElementById("cmobile").innerHTML="enter correct 10 digit mobile no.";
+                }
+
+                age = document.getElementById("age").value;
+                if( isNaN(age) || age<18 || age > 100 )
+                {
+                    document.getElementById("cage").innerHTML= "Invalid age. Age should be greater than 18";
+                }
+
+                address = document.getElementById("address").value;
+                if(address.length == 0 )
+                {
+                    document.getElementById("caddress").innerHTML= "address cannot be blank";
+                }
+
+            }
+        </script>
+    </head>
+    <body>
+        <form name="myForm" >
+            <h1>Registration</h1>
+            <p>Fill this form to register</p><hr>
+            <label for="uid"><b>User id : </b></label>
+            <input type="text" id="uid" name="uid" placeholder="Enter username"  ><br><br>
+            <p id = "cuid"></p>
+            
+            <label for="password"><b>Password : </b></label>
+            <input type="text" id="password" name="password" placeholder="Enter pasword"  ><br><br>
+            <p id = "cpassword"></p>
+
+            <label for="mobile"><b>Mobile no : </b></label>
+            <input type="text" id="mobile" name="mobile"><br><br>
+            <p id = "cmobile"></p>
+
+            <label for="age"><b>Age :</b></label>
+            <input type="text" id="age" name="age" placeholder="Enter age as on 
+                31st December 2019" ><br>
+                <br>
+            <p id="cage"></p>
+
+            <label for="address"><b>User id :</b></label>
+            <textarea id = "address" name="address" rows="6" cols="25" >
+            </textarea><br><br>
+            <p id="caddress"></p>
+
+            <button onclick="validation()"> Validate </button>
+
+            <p>Already a member? <a href="#">Sign in</a> </p>
+
+
+        </form>
+    </body>
+</html>
