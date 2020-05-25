@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Q1
+        </title>
+    </head>
+    
+    <body>
+        <h1>Class Employee</h1>
+        <p>Create class Employee which has instance member id, name , salary, net salary.
+            Also Write getter setter for each instance member.
+            Write calculate net salary function whose job is to calculate net salary after 
+            deduction of 10 % TDS. Create 2 objects of the class and call method.</p>
+
+        <p id="demo1"></p>
+        <p id="demo2"></p>
+
+        <script>
+
+            class Employee {
+                constructor(id,name,sal){
+                    this.id = id;
+                    this.name = name;
+                    this.sal = sal;
+                    this.netSal;
+                
+                }
+
+                calNetSal()
+                {
+                    this.netSal = this.sal - this.sal*0.1;
+                }
+
+                //setters
+                set setId(id){
+                    this.id = id;
+                }
+
+                set setName(name){
+                    this.name = name;
+                }
+
+                set setSal(sal){
+                    this.sal = sal;
+                }
+
+                //getters
+                get getid()
+                {
+                    return this.id;
+                }
+
+                get getName()
+                {
+                    return this.name;
+                }
+
+                get getSal()
+                {
+                    return this.sal;
+                }
+
+                get getNetSal()
+                {
+                    return this.netSal;
+                }
+            }
+
+                
+
+            var obj1 = new Employee(1000, "Akash", 25000);
+            obj1.calNetSal();
+            var txt1 = JSON.stringify(obj1);
+            document.getElementById("demo1").innerHTML = txt1;
+
+            var obj2 = new Employee();
+            obj2.setId = 1001;
+            obj2.setName = "Rawat";
+            obj2.setSal = 50000;
+            obj2.calNetSal();
+
+            document.getElementById("demo2").innerHTML = obj2.getSal;
+
+
+            
+        </script>
+
+
+    </body>
+</html>
