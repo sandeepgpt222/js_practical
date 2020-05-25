@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Q2
+        </title>
+    </head>
+    <body>
+        <h1>q2</h1>
+        <p>Create class student which has instance member roll number, name,
+            marks1,marks2,marks3, total, percentage. Write getter setter for roll number,
+            name and marks1,marks2,marks3. Write a method to calculate total and  percentage.</p>
+        
+        <p id="demo1"></p>    
+        <p id="demo2"></p>    
+        
+        <script>
+            class Student {
+                constructor(rollno,name,marks1,marks2,marks3)
+                {
+                    this.rollno = rollno;
+                    this.name = name;
+                    this.marks1 = marks1;
+                    this.marks2 = marks2;
+                    this.marks3 = marks3;
+                    //this.total;
+                    //this.percentage;
+                }
+
+                calTotal(){
+                    this.total = this.marks1 + this.marks2 + this.marks3;
+                }
+
+                calPercentage()
+                {
+                    this.percentage = (this.marks1 + this.marks2 + this.marks3)*100/300;
+                }
+
+                //setter
+                set setrollno(rollno){
+                    this.rollno = rollno;
+                }
+
+                set setName(name){
+                    this.name = name;
+                }
+
+                set setMarks1(one){
+                    this.marks1 = one;
+                }
+                
+                set setMarks2(two){
+                    this.marks2 = two;
+                }
+
+                set setMarks3(three){
+                    this.marks3 = three;
+                }
+
+                get getData()
+                {
+                    var txt = "roll no: "+ this.rollno +" " + this.name + " " + "total marks : " + this.total +" "+ "percentage: "+ this.percentage;
+                    return txt;
+                }
+
+            }
+
+            var s1 = new Student(10,"Girish",60,80,70) ;
+            s1.calTotal();
+            s1.calPercentage();
+
+            document.getElementById("demo1").innerHTML = s1.getData;
+
+            var s2 = new Student();
+            s2.setrollno = 20;
+            s2.setName =  "Pratap";
+            s2.setMarks1 = 95;
+            s2.setMarks2 = 59;
+            s2.setMarks3 = 89;
+            s2.calTotal();
+            s2.calPercentage();
+            
+            document.getElementById("demo2").innerHTML = s2.getData;
+
+
+        </script>
+    </body>
+
+</html>
