@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="q1-q5.js"></script>
+    </head>
+    <body>
+        <p>Write your name in red colour , on a button click it should change the text colour to blue</p>
+        <p id="q1" style="color: red">Sandeep Gupta</p>
+        <button onclick='document.getElementById("q1").style.color = "blue" '>CLick me</button>
+        <hr>
+        <br>
+
+        <p>Write your name in h1 tag align it to the left, on button click it should align to right</p>
+        <h1 id="q2" style="text-align: left">Sandeep</h1>
+        <button onclick="document.getElementById('q2').style.textAlign = 'right' ">Align</button>
+        <br>
+        <hr>
+        <br>
+
+        <p>Write your name in p tag with background colour blue and text in white colour , on button click 
+            it should reverse the colour ie. Text colour blue and background colour white</p>
+        <p id="q3" style="background-color: blue; color: white">Sandeep</p>
+        <button onclick="reverseColor()">Reverse</button>
+        <br>
+        <hr>
+        <br>
+        <!-- q4 Create three radio buttons which show names of colour. Create a text box.
+            Let user enter name in text box and select radio button , on clicking the text in a text box should
+            get respective colour. -->
+        
+        <p>Enter any text and click on the color to change its color</p>
+        Name : <input type="text" id="q4"><br>
+        <label for="blue">Blue</label>
+        <input type="radio" name = "colr" id = "blue" value="blue" onclick="document.getElementById('q4').style.color = 'blue'">
+        <label for="green">Green</label>
+        <input type="radio" name = "colr" id="green" value="green" onclick="document.getElementById('q4').style.color = 'green'">
+        <label for="red">Red</label>
+        <input type="radio" name="colr" id="red" value="red" onclick="document.getElementById('q4').style.color = 'red'">
+        <br>
+        <hr>
+        <br>
+        <!--Create a dropdown box showing the number 1 to 10. Write your name in p tag let user select option
+            from dropdown and that font size should be applied to the data in p tag-->
+        <p id="q5">Sandeep Gupta</p>
+        <label for="fontSize">Select required fontsize : </label>
+        <select name="fontSize" id="fontSize" onchange="changeFont()" >
+            <option>Select</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option> 
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select>
+        
+
+
+
+    </body>
+</html>
