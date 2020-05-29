@@ -1,0 +1,25 @@
+<!doctype html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>q3</title>
+</head>
+<body>
+	<h1>Sum of nos 2,8,9,6,4 and 5 is : </h1>
+	<p id="demo"></p>
+
+	<script type="text/javascript">
+		function add(){
+			var i , sum = 0;
+			for(i=0; i<arguments.length;i++)
+			{
+				sum += arguments[i];
+			}
+			return sum;
+		}
+
+		document.getElementById("demo").innerHTML = add(2,8,9,6,4,5);
+
+	</script>
+</body>
+</html>
